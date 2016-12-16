@@ -1,38 +1,78 @@
+
+
 // Resets, Clearfix, etc
 
 // Variables
- 
-// Media Query Ranges 
- 
+$bg-color: black;
+$bg-color-blocks: orange;
+$h1-font-color: orange;
+$font-size:5px;
+
+
+// Media Query Ranges
+@media (max-width: 900px) {
+
+  body {
+    background-color: $bg-color;
+    text-align: center;
+    color: #h1-font-color;
+
+  }
+
+  .block_family {
+
+    max-width:500px;
+    margin:auto;
+    color: red;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .block_family{
+    max-width:500px;
+    margin:auto;
+    color: green;
+  }
+}
+
 // Mixins
 
 // Styles
 body{
-  background-color: orange;
+  background-color: $bg-color;
   text-align: center;
-  color: #EEE;
+  color: #h1-font-color;
+  line-height: 1px;
 }
- 
+
 h1, h2, h3, h4{
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 400;
+
 }
- 
+
 h1{
+  color: $h1-font-color;
+  font-size:55px;
   padding: 20px;
+
 }
- 
+
 h2{
- 
+  font-size: 35px;
 }
- 
- 
-.block_family{
-  max-width:350px;
+
+.block_family {
+  max-width:800px;
   margin:auto;
+
 }
- 
+
 .block_family li{
-  background-color: #222;
+
+  background-color: $bg-color-blocks;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 1px;
+
 }
